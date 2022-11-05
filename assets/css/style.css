@@ -85,6 +85,7 @@ html {
 	margin-top: 16px;
 	display: inline-block;
 	border: none;
+	text-align: center;
 }
 
 .btn:hover {
@@ -122,7 +123,7 @@ html {
 #nav li a {
 	text-decoration: none;
 	line-height: 46px;
-	display: inline-block;
+	display: block;
 }
 #nav li:hover .subnav {
 	display: block;
@@ -161,9 +162,18 @@ html {
 	font-size: 14px;
 }
 
-#header .search-button {
+#header .mobile-menu-btn{
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#header .search-button,
+#header .mobile-menu-btn {
 	float: right;
 	padding: 0 23px;
+	font-size: 20px;
 }
 
 #header .search-button:hover {
@@ -171,7 +181,16 @@ html {
 	background-color: #f44336;
 }
 
-#header .search-button .search-icon {
+#header .mobile-menu-btn:hover {
+	background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+	color: #000;
+} 
+
+#header .search-button .search-icon,
+#header .mobile-menu-btn .menu-icon {
 	color: #fff;
 	line-height: 46px;
 }
@@ -201,9 +220,12 @@ html {
 
 #content .content-section {
 	width: 800px;
+	max-width: 100%;
 	padding: 64px 0 112px;
 	margin-left: auto;
 	margin-right: auto;
+	padding-left: 16px;
+	padding-right: 16px;
 }
 
 #content .section-heading {
@@ -230,11 +252,12 @@ html {
 }
 
 #content .member-list {
-	margin-top: 64px;
+	margin-top: 32px;
 }
 
 #content .member-name {
 	font-size: 15px ;
+	padding-top: 16px;
 }
 
 #content .member-img {
@@ -280,7 +303,7 @@ html {
 }
 
 .places-list {
-	padding-top: 32px;
+	padding-top: 16px;
 }
 
 .places-img {
@@ -426,6 +449,15 @@ html {
 .contact-info i[class*="ti-"] {
 	width: 30px;
 	display: inline-block;
+}
+
+.contact-info a {
+	color: #0000EE;
+	opacity: 0.8;
+}
+
+.contact-info a:hover {
+	opacity: 1;
 }
 
 .form-content  .form-control {
